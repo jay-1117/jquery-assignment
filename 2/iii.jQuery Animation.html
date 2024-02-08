@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+    
+        .main {
+            margin-top:50px
+        }
+
+        #box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+  }
+
+        </style>
+
+<section class="container">
+    <div class="main">
+        <div id="box"></div>
+
+    </div>
+
+
+</section>
+          
+
+<!-- Include jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+   $(document).ready(function() {
+    // Function to perform the animation
+    function performAnimation() {
+      $("#box").animate({
+        left: '250px',
+        opacity: '0.5',
+        height: '150px',
+        width: '150px'
+      }, "slow", function() {
+        // Animation complete
+        // Reset the properties for next animation
+        $(this).css({
+          left: '0',
+          opacity: '1',
+          height: '100px',
+          width: '100px'
+        });
+      });
+    }
+
+    // Repeat the animation 5 times with a delay
+    function repeatAnimation(count) {
+      if (count <= 0) {
+        return; // Exit the function when count reaches 0
+      }
+      performAnimation(); // Perform the animation
+      setTimeout(function() {
+        repeatAnimation(count - 1); // Repeat the animation after a delay
+      }, 1000); // Delay of 2 seconds (2000 milliseconds)
+    }
+
+    // Start the animation
+    repeatAnimation(5); // Repeat 5 times
+  });
+</script>
+</script>
+
+  
+</body>
+</html>

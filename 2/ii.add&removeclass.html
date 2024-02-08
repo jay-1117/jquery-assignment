@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .main {
+        margin-top:50px
+    }
+
+    .highlighted {
+    background-color: yellow;
+    padding: 25px 0;
+    }
+
+    .row {
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="main">
+            <div>This is a div</div>
+
+            <div class="row">hello world</div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Include jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  // jQuery code to add class
+  $(document).ready(function() {
+    // Select the div element and add class "highlighted"
+    $("div").addClass("highlighted");
+  });
+
+
+    // jQuery code to remove class
+    $(document).ready(function() {
+    // Select the div element and remove class "highlighted"
+    $("div").removeClass("row");
+  });
+
+</script>
+
+
+
+
+</body>
+</html>

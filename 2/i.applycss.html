@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .main {
+            margin-top:50px
+        }
+.title {
+    padding: 15px 0;
+}
+    
+
+</style>
+</head>
+
+<body>
+<section class="container">
+    <div class="main">
+        <div class="header">
+            <h1>2.How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery ,
+                JQuery Animation?</h1>
+
+        </div>
+
+        <div class="title">
+            <h2>i. Applying CSS using jQuery</h2>
+        </div>
+
+      <!-- /code -->
+      <div class="myDiv">This is a div</div>
+
+
+
+      <!-- Include jQuery library -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
+      <script>
+        // jQuery code to apply CSS
+        $(document).ready(function() {
+          // Select the element with class "myDiv" and apply CSS
+          $(".myDiv").css({
+            "color": "blue",
+            "font-size": "20px",
+            "border": "2px solid black",
+            "width":"500px"
+          });
+        });
+
+
+    
+      </script>
+
+
+
+    </div>
+</section>    
+    
+</body>
+</html>
